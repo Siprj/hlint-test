@@ -10,7 +10,7 @@ matrix:
     addons:
       apt:
         sources:
-        - sourceline: 'hvr-ghc'
+        - sourceline: 'ppa:hvr/ghc'
           key_url: 'https://packagecloud.io/gpg.key'
         packages:
         - ghc-7.8.4
@@ -18,7 +18,7 @@ matrix:
     addons:
       apt:
         sources:
-        - sourceline: 'hvr-ghc'
+        - sourceline: 'ppa:hvr/ghc'
           key_url: 'https://packagecloud.io/gpg.key'
         packages:
         - ghc-7.10.3
@@ -26,7 +26,7 @@ matrix:
     addons:
       apt:
         sources:
-        - sourceline: 'hvr-ghc'
+        - sourceline: 'ppa:hvr/ghc'
           key_url: 'https://packagecloud.io/gpg.key'
         packages:
         - ghc-head
@@ -34,7 +34,7 @@ matrix:
     addons:
       apt:
         sources:
-        - sourceline: 'hvr-ghc'
+        - sourceline: 'ppa:hvr/ghc'
           key_url: 'https://packagecloud.io/gpg.key'
         packages:
         - ghc-head
