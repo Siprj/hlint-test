@@ -1,20 +1,33 @@
-name:                hlint-test
-version:             0.1.0.0
+name: &name hlint-test
+version: 0.1.0.0
 #synopsis:
 #description:
-homepage:            https://github.com/Siprj/hlint-test#readme
-license:             BSD3
-author:              Jan Sipr
-maintainer:          sipr.jan@gmail.com
-copyright:           BSD3
-category:            test
+homepage: https://github.com/Siprj/hlint-test#readme
+license: BSD3
+author: Jan Sipr
+maintainer: sipr.jan@gmail.com
+copyright: BSD3
+category: test
 extra-source-files:
-- README.md
+  - README.md
 
 dependencies:
   - base >= 4.7 && < 5
+  - hlint >= 2.0
+
+ghc-options:
+  - -Wall
+  - -Werror
+  - -fwarn-tabs
+  - -fwarn-missing-import-lists
+  - -fwarn-implicit-prelude
+
+library:
+  source-dirs: src
 
 executables:
   hlint-test:
-    source-dirs:      src
-    main:             Main.hs
+    source-dirs: driver
+    main: hlint-test.hs
+    dependencies:
+      - *name
