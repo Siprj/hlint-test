@@ -31,3 +31,13 @@ executables:
     main: hlint-test.hs
     dependencies:
       - *name
+
+tests:
+  hlint:
+    source-dirs: test
+    main: hlint.hs
+    ghc-options:
+      - -threaded
+      - -with-rtsopts=-N
+    dependencies:
+      - hlint-test
