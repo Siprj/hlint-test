@@ -1,0 +1,30 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: da6cf5fa2ee386897adc2a1e3cf5776ef0934ad0e159a15f472b2cd83ac4acef
+
+name:           hlint-test
+version:        0.1.0.0
+category:       test
+homepage:       https://github.com/Siprj/hlint-test#readme
+author:         Jan Sipr
+maintainer:     sipr.jan@gmail.com
+copyright:      BSD3
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+executable hlint-test
+  main-is: Main.hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  other-modules:
+      Paths_hlint_test
+  default-language: Haskell2010

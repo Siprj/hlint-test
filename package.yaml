@@ -1,0 +1,20 @@
+name:                hlint-test
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/Siprj/hlint-test#readme
+license:             BSD3
+author:              Jan Sipr
+maintainer:          sipr.jan@gmail.com
+copyright:           BSD3
+category:            test
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+executables:
+  hlint-test:
+    source-dirs:      src
+    main:             Main.hs
