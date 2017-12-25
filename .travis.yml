@@ -4,14 +4,47 @@ sudo: false
 # Choose a lightweight base image; we provide our own build tools.
 language: c
 
-# GHC depends on GMP. You can add other dependencies here as well.
-addons:
-  apt:
-    packages:
-    - libgmp-dev
+matrix:
+  include:
+  - env: GHCVER=7.8.4 STACK_YAML=stack.yaml
+    addons:
+      apt:
+        sources:
+        - sourceline: 'hvr-ghc'
+          key_url: 'https://packagecloud.io/gpg.key'
+        packages:
+        - ghc-7.8.4
+  - env: GHCVER=7.10.3 STACK_YAML=stack.yaml
+    addons:
+      apt:
+        sources:
+        - sourceline: 'hvr-ghc'
+          key_url: 'https://packagecloud.io/gpg.key'
+        packages:
+        - ghc-7.10.3
+  - env: GHCVER=8.2.1 STACK_YAML=stack.yaml
+    addons:
+      apt:
+        sources:
+        - sourceline: 'hvr-ghc'
+          key_url: 'https://packagecloud.io/gpg.key'
+        packages:
+        - ghc-head
+  - env: GHCVER=head STACK_YAML=stack.yaml
+    addons:
+      apt:
+        sources:
+        - sourceline: 'hvr-ghc'
+          key_url: 'https://packagecloud.io/gpg.key'
+        packages:
+        - ghc-head
+  allow_failures:
+    - env: GHCVER=head STACK_YAML=stack-head.yaml
 
 before_install:
-# Download and unpack the stack executable
+  # ghc
+  - export PATH=/opt/ghc/$GHCVER/bin:$PATH
+  # Download and unpack the stack executable
   - mkdir -p ~/.local/bin
   - export PATH=$HOME/.local/bin:$PATH
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
