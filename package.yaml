@@ -39,6 +39,9 @@ executables:
   hlint-test:
     source-dirs: driver
     main: hlint-test.hs
+    ghc-options:
+      - -threaded
+      - -with-rtsopts=-N
     dependencies:
       - *name
 
