@@ -17,10 +17,20 @@ dependencies:
 
 ghc-options:
   - -Wall
-  - -Werror
   - -fwarn-tabs
   - -fwarn-missing-import-lists
   - -fwarn-implicit-prelude
+
+flags:
+  pedantic:
+    description: "Pass additional warning flags and -Werror to GHC."
+    default: false
+    manual: true
+
+when:
+  - condition: flag(pedantic)
+    ghc-options:
+      - -Werror
 
 library:
   source-dirs: src
