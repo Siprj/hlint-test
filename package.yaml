@@ -1,13 +1,16 @@
 name: &name hlint-test
 version: 0.1.0.0
-#synopsis:
-#description:
+synopsis: Run hlint in test suite
+description: >
+    Allows you to write small  hlint test runner; so you will not
+    forget to run hlint before pushing to master.
 homepage: https://github.com/Siprj/hlint-test#readme
 license: BSD3
 author: Jan Sipr
 maintainer: sipr.jan@gmail.com
 copyright: BSD3
 category: test
+github: Siprj/hlint-test
 extra-source-files:
   - README.md
 
