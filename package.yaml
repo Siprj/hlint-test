@@ -13,6 +13,7 @@ category: test
 github: Siprj/hlint-test
 extra-source-files:
   - README.md
+  - CHANGES.md
 
 dependencies:
   - base >= 4.7 && < 5
