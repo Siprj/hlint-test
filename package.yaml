@@ -6,9 +6,9 @@ description: >
     forget to run hlint before pushing to master.
 homepage: https://github.com/Siprj/hlint-test#readme
 license: BSD3
-author: Jan Sipr <sipr.jan@gmail.com>
-maintainer: Jan Sipr <sipr.jan@gmail.com>
-copyright: 2017 Jan Sipr
+author: Tomáš Janoušek <tomi@nomi.cz>, Jan Šipr <sipr.jan@gmail.com>
+maintainer: Jan Šipr <sipr.jan@gmail.com>
+copyright: 2017  Tomáš Janoušek, Jan Šipr
 category: test
 github: Siprj/hlint-test
 extra-source-files:
