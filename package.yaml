@@ -48,13 +48,3 @@ executables:
       - -with-rtsopts=-N
     dependencies:
       - *name
-
-tests:
-  hlint:
-    source-dirs: test
-    main: hlint.hs
-    ghc-options:
-      - -threaded
-      - -with-rtsopts=-N
-    dependencies:
-      - hlint-test
