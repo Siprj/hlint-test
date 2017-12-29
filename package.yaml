@@ -1,5 +1,5 @@
 name: &name hlint-test
-version: 0.1.0.0
+version: 0.1.0.1
 synopsis: Run hlint in test suite
 description: >
     Allows you to write small  hlint test runner; so you will not

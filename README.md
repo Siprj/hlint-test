@@ -34,11 +34,12 @@ arguments to the hlint. As it's shown on following line:
 {-# OPTIONS_GHC -F -pgmF hlint-test -optF src -optF -r #-}
 ```
 
-This will tell hlint to look for source codes only in `src` directory and to 
+This will tell hlint to look for source codes only in `src` directory and to
 generate html report if some suggestions are found.
 
 Also you can use hlint configuration file too ;).
 
 ## Example
 
-Simple example of the use can be seen in this package.
+Simple example of the use can be seen in
+https://github.com/Siprj/hlint-test-example
